@@ -2,6 +2,7 @@ export const reduxTypes = {
   INCREMENT: "INCREMENT",
   DECREMENT: "DECREMENT",
   ADD_PRODUCT: "ADD_PRODUCT",
+  REMOVE_PRODUCT: "REMOVE_PRODUCT",
   CHANGE_COLOR: "CHANGE_COLOR",
 };
 
@@ -42,5 +43,7 @@ export const generateProduct = () => {
   const name = `${randomAdjective} ${randomItem}`;
   const price = (Math.random() * 200 + 10).toFixed(2);
 
-  return { name, price: parseFloat(price) };
+  const id = crypto.randomUUID();
+
+  return { id, name, price: parseFloat(price) };
 };

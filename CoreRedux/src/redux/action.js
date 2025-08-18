@@ -19,11 +19,19 @@ export function changeColor() {
 }
 
 export function addProduct() {
-  const { name, price } = generateProduct();
+  const { id, name, price } = generateProduct();
   
   return {
     type: reduxTypes.ADD_PRODUCT,
+    id,
     name,
     price,
+  };
+}
+
+export function removeProduct(productId) {
+  return {
+    type: reduxTypes.REMOVE_PRODUCT,
+    id:productId
   };
 }

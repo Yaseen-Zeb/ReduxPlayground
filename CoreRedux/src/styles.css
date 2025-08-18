@@ -167,6 +167,11 @@ body {
   overflow-y: auto;
 }
 
+.del {
+  color: red;
+  cursor: pointer;
+}
+
 .products-table {
   width: 100%;
   border-collapse: collapse;

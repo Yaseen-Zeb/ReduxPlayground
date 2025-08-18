@@ -19,8 +19,13 @@ export const reducer = (state = intialState, action) => {
         ...state,
         products: [
           ...state.products,
-          { name: action.name, price: action.price },
+          { id: action.id, name: action.name, price: action.price },
         ],
+      };
+    case reduxTypes.REMOVE_PRODUCT:
+      return {
+        ...state,
+        products: state.products.filter((product) => product.id != action.id),
       };
     default:
       return state;
