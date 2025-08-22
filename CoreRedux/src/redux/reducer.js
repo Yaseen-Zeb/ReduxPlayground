@@ -4,7 +4,7 @@ import { combineReducers } from "redux";
 const intialState = {
   count: 0,
   color: "red",
-  products: [],
+  products: []
 };
 
 // without combineReducers
