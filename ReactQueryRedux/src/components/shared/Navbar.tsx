@@ -16,8 +16,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="bg-white/80 shadow-sm border-b sticky top-0 z-50 w-full backdrop-blur-md">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               {/* Sidebar Toggle */}
@@ -30,24 +30,16 @@ const Navbar = () => {
                 </svg>
               </button>
 
-              {/* Logo */}
-              <div className="flex-shrink-0 flex items-center">
-                <Link to="/" className="text-xl font-bold text-gray-900">
-                  ReactQueryRedux
-                </Link>
-              </div>
-
               {/* Desktop Navigation */}
-              <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
+              <div className="hidden lg:flex lg:space-x-8">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                      location.pathname === item.href
+                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${location.pathname === item.href
                         ? 'border-indigo-500 text-gray-900'
                         : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -75,11 +67,10 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
-                  location.pathname === item.href
+                className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${location.pathname === item.href
                     ? 'bg-indigo-50 border-indigo-500 text-indigo-700'
                     : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>

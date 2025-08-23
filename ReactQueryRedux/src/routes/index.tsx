@@ -1,4 +1,3 @@
-import Posts from "../features/posts/components/Posts";
 import Comments from "../features/comments/components/comments";
 import Users from "../features/users/components/users";
 import Todos from "../features/todos/components/todos";
@@ -7,6 +6,7 @@ import Todos from "../features/todos/components/todos";
 import { createBrowserRouter } from "react-router";
 import { paths } from "@/utils/constants";
 import RootLayout from "@/components/layouts/root-layout";
+import Posts from "@/features/posts/components/posts";
 
 export const router = createBrowserRouter([
     {

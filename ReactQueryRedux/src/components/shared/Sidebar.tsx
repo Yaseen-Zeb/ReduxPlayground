@@ -24,7 +24,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         }`}>
         <div className="p-6">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-xl font-bold text-gray-800">Dashboard</h2>
+            <h2 className="text-xl font-bold text-gray-800">ReactQueryRedux</h2>
             <button
               onClick={onClose}
               className="lg:hidden p-2 rounded-md hover:bg-gray-100"
